@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "guests": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::guest.guest",
+      "inversedBy": "events"
+    }
+  }
+}
