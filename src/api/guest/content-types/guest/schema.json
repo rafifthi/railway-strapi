@@ -4,7 +4,8 @@
   "info": {
     "singularName": "guest",
     "pluralName": "guests",
-    "displayName": "Guest"
+    "displayName": "Guest",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -19,8 +20,7 @@
     "pax": {
       "type": "integer",
       "required": true,
-      "default": 1,
-      "min": 1
+      "default": 1
     },
     "guest_of": {
       "type": "enumeration",

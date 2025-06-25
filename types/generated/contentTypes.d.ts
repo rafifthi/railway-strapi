@@ -529,6 +529,7 @@ export interface ApiGuestGuest extends Struct.CollectionTypeSchema {
     singularName: 'guest';
     pluralName: 'guests';
     displayName: 'Guest';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -539,12 +540,6 @@ export interface ApiGuestGuest extends Struct.CollectionTypeSchema {
       Schema.Attribute.Unique;
     pax: Schema.Attribute.Integer &
       Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 1;
-        },
-        number
-      > &
       Schema.Attribute.DefaultTo<1>;
     guest_of: Schema.Attribute.Enumeration<['Kanza', 'Rafif']>;
     rsvp: Schema.Attribute.Boolean &
