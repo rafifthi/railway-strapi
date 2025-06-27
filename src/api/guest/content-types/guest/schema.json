@@ -69,6 +69,13 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "guests"
+    },
+    "rsvp_status": {
+      "type": "enumeration",
+      "enum": [
+        "Hadir",
+        "Tidak Hadir"
+      ]
     }
   }
 }

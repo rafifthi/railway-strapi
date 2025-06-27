@@ -555,6 +555,7 @@ export interface ApiGuestGuest extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'name'>;
     message: Schema.Attribute.Text;
     events: Schema.Attribute.Relation<'manyToMany', 'api::event.event'>;
+    rsvp_status: Schema.Attribute.Enumeration<['Hadir', 'Tidak Hadir']>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
